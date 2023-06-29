@@ -36,7 +36,7 @@ namespace BeatSaberMarkupLanguage.Settings
 
         public void Setup()
         {
-            if (BSMLParser.IsSingletonAvailable)
+            if (BSMLParser.Exists)
             {
                 try
                 {

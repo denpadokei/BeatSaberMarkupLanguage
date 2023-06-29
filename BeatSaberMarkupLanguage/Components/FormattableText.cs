@@ -95,7 +95,7 @@ namespace BeatSaberMarkupLanguage.Components
             }
         }
 
-        protected override void OnDestroy()
+        public override void OnDestroy()
         {
             Destroyed?.Invoke(this, null);
             base.OnDestroy();

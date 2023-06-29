@@ -114,7 +114,7 @@ namespace BeatSaberMarkupLanguage.ViewControllers
             }
         }
 
-        protected override void DidActivate(bool firstActivation, bool addedToHierarchy, bool screenSystemEnabling)
+        public override void DidActivate(bool firstActivation, bool addedToHierarchy, bool screenSystemEnabling)
         {
             if (!string.IsNullOrEmpty(ContentFilePath))
             {
@@ -148,7 +148,7 @@ namespace BeatSaberMarkupLanguage.ViewControllers
             didActivate?.Invoke(firstActivation, addedToHierarchy, screenSystemEnabling);
         }
 
-        protected override void DidDeactivate(bool removedFromHierarchy, bool screenSystemDisabling)
+        public override void DidDeactivate(bool removedFromHierarchy, bool screenSystemDisabling)
         {
             if (!string.IsNullOrEmpty(ContentFilePath))
             {

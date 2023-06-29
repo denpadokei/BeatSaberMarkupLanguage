@@ -96,7 +96,7 @@ namespace BeatSaberMarkupLanguage.ViewControllers
             content = null;
         }
 
-        protected override void DidActivate(bool firstActivation, bool addedToHierarchy, bool screenSystemEnabling)
+        public override void DidActivate(bool firstActivation, bool addedToHierarchy, bool screenSystemEnabling)
         {
             if (ContentChanged && !firstActivation)
             {
@@ -123,7 +123,7 @@ namespace BeatSaberMarkupLanguage.ViewControllers
             didActivate?.Invoke(firstActivation, addedToHierarchy, screenSystemEnabling);
         }
 
-        protected override void DidDeactivate(bool removedFromHierarchy, bool screenSystemDisabling)
+        public override void DidDeactivate(bool removedFromHierarchy, bool screenSystemDisabling)
         {
             content = null;
 #if HRVC_DEBUG

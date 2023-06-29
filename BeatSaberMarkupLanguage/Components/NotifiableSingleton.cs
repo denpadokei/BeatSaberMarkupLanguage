@@ -2,11 +2,12 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.ResourceManagement.Util;
 
 namespace BeatSaberMarkupLanguage.Components
 {
     public class NotifiableSingleton<T> : PersistentSingleton<T>, INotifyPropertyChanged
-        where T : MonoBehaviour
+        where T : ComponentSingleton<T>
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
